@@ -31,8 +31,15 @@ public class SnackDispenser {
     }
 
     public int countFlavor(String flavor) {
-        // Will implement this later
-        return 0;
+        int flavorCount = 0;
+
+        for (Object obj : snacks.toArray()) {
+            Snack snack = (Snack) obj; // Cast the object to a Snack
+            if (snack.getFlavor().equals(flavor)) { // Check if the snack's flavor matches the specified flavor
+                flavorCount++; // Increment the count if it matches
+            }
+        }
+        return flavorCount;
     }
 
     public void printAllSnacks() {

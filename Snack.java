@@ -11,7 +11,7 @@ public class Snack {
         return name;
     }
 
-    public String getFalvor() {
+    public String getFlavor() {
         return flavor;
     }
 }
