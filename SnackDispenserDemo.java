@@ -41,5 +41,25 @@ public class SnackDispenserDemo {
         count = dispenser.countFlavor("Salty");
         System.out.println("Number of Salty snacks: " + count);
 
+        /*
+         * We will now test our delete method, we will remove a snack until there are
+         * none left
+         */
+
+        while (!dispenser.isEmpty()) {
+            Snack snack = dispenser.removeSnack();
+            System.out.println(snack.getName() + " has been removed!");
+        }
+
+        /*
+         * Now lets check if our bag is truly empty.
+         */
+
+        boolean isEmpty = dispenser.isEmpty();
+
+        if (isEmpty)
+            System.out.println("Your bag is cleared");
+        else
+            System.out.println("Issue! Your bag is not cleared!");
     }
 }
