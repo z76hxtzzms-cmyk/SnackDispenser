@@ -7,7 +7,7 @@ public class SnackDispenser {
     }
 
     public boolean addSnack(Snack s) {
-        return snacks.add();
+        return snacks.add(s);
     }
 
     public Snack removeSnack() {
@@ -17,6 +17,7 @@ public class SnackDispenser {
 
     public int countFlavor(String flavor) {
         // Will implement this later
+        return 0;
     }
 
     public void printAllSnacks()
