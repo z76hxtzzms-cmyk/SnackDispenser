@@ -61,11 +61,25 @@ public class SnackDispenser {
     /**
      * Prints the name and flavor of all snacks currently in the dispenser.
      */
-    public void printAllSnacks() {
-        for (Object obj : snacks.toArray()) {
-            Snack s = (Snack) obj; // Cast the object to a Snack
-            System.out.println(s.getName() + " (" + s.getFlavor() + ")"); // Print the snack's name and flavor
-        }
+public void printAllSnacks() {
+    System.out.println("========================================");
+    System.out.println("            SNACK DISPENSER             ");
+    System.out.println("========================================");
+
+    Object[] array = snacks.toArray();
+
+    if (array.length == 0) {
+        System.out.println("No snacks in the dispenser.");
+        System.out.println("========================================");
+        return;
     }
+
+    for (Object obj : array) {
+        Snack s = (Snack) obj;
+        System.out.printf(" %-20s  (%s)%n", s.getName(), s.getFlavor());
+    }
+
+    System.out.println("========================================");
+}
 
 }

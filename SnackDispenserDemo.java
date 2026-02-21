@@ -48,7 +48,7 @@ public class SnackDispenserDemo {
 
         while (!dispenser.isEmpty()) {
             Snack snack = dispenser.removeSnack();
-            System.out.println(snack.getName() + " has been removed!");
+            System.out.println("Removed: " + snack.getName());
         }
 
         /*
@@ -57,9 +57,13 @@ public class SnackDispenserDemo {
 
         boolean isEmpty = dispenser.isEmpty();
 
-        if (isEmpty)
-            System.out.println("Your bag is cleared");
-        else
+        if (isEmpty) {
+            System.out.println("========================================");
+            System.out.println(" Dispenser is now empty.");
+            System.out.println("========================================");
+        } else {
             System.out.println("Issue! Your bag is not cleared!");
+        }
+
     }
 }
