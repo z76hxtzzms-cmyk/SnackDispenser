@@ -31,6 +31,16 @@ public class SnackDispenser {
     }
 
     /**
+     * Removes a specific snack from the dispenser.
+     * @return True if the snack bag is empty, or false if not.
+     */
+
+    public boolean isEmpty()
+    {
+        return snacks.isEmpty();
+    }
+
+    /**
      * Counts the number of snacks in the dispenser that have a specific flavor.
      * 
      * @param flavor The flavor to be counted.
