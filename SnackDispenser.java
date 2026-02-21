@@ -30,20 +30,32 @@ public class SnackDispenser {
         return snacks.remove(); // Uses ArrayBag's remove method to remove an unspecified snack from the bag
     }
 
+    /**
+     * Counts the number of snacks in the dispenser that have a specific flavor.
+     * 
+     * @param flavor The flavor to be counted.
+     * @return The number of snacks in the dispenser that have the specified flavor.
+     */
     public int countFlavor(String flavor) {
         int flavorCount = 0;
 
         for (Object obj : snacks.toArray()) {
-            Snack snack = (Snack) obj; // Cast the object to a Snack
-            if (snack.getFlavor().equals(flavor)) { // Check if the snack's flavor matches the specified flavor
+            Snack s = (Snack) obj; // Cast the object to a Snack
+            if (s.getFlavor().equals(flavor)) { // Check if the snack's flavor matches the specified flavor
                 flavorCount++; // Increment the count if it matches
             }
         }
         return flavorCount;
     }
 
+    /**
+     * Prints the name and flavor of all snacks currently in the dispenser.
+     */
     public void printAllSnacks() {
-        // Will implement this later
+        for (Object obj : snacks.toArray()) {
+            Snack s = (Snack) obj; // Cast the object to a Snack
+            System.out.println(s.getName() + " (" + s.getFlavor() + ")"); // Print the snack's name and flavor
+        }
     }
 
 }
